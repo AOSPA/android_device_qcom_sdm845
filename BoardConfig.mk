@@ -71,7 +71,7 @@ ifeq ($(BOARD_AVB_ENABLE), true)
    BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 endif
 # Enable DTBO for recovery image
-BOARD_INCLUDE_RECOVERY_DTBO := true
+#BOARD_INCLUDE_RECOVERY_DTBO := true
 endif
 
 ifeq ($(ENABLE_AB), true)
@@ -101,29 +101,29 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 10737418240
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
-BOARD_DTBOIMG_PARTITION_SIZE := 0x0800000
+#BOARD_DTBOIMG_PARTITION_SIZE := 0x0800000
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
-BOARD_VENDOR_KERNEL_MODULES := \
-    $(KERNEL_MODULES_OUT)/wil6210.ko \
-    $(KERNEL_MODULES_OUT)/msm_11ad_proxy.ko \
-    $(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko \
-    $(KERNEL_MODULES_OUT)/rdbg.ko \
-    $(KERNEL_MODULES_OUT)/mpq-adapter.ko \
-    $(KERNEL_MODULES_OUT)/mpq-dmx-hw-plugin.ko \
-    $(KERNEL_MODULES_OUT)/tspp.ko \
-    $(KERNEL_MODULES_OUT)/wcd-core.ko \
-    $(KERNEL_MODULES_OUT)/pinctrl-wcd.ko \
-    $(KERNEL_MODULES_OUT)/swr-wcd-ctrl.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wcd9xxx.ko \
-    $(KERNEL_MODULES_OUT)/wcd-dsp-glink.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wcd934x.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wcd-mbhc.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wsa881x.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-sdm845.ko \
-    $(KERNEL_MODULES_OUT)/snd-soc-wcd-spi.ko \
-    $(KERNEL_MODULES_OUT)/llcc_perfmon.ko
+#BOARD_VENDOR_KERNEL_MODULES := \
+    #$(KERNEL_MODULES_OUT)/wil6210.ko \
+    #$(KERNEL_MODULES_OUT)/msm_11ad_proxy.ko \
+    #$(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko \
+    #$(KERNEL_MODULES_OUT)/rdbg.ko \
+    #$(KERNEL_MODULES_OUT)/mpq-adapter.ko \
+    #$(KERNEL_MODULES_OUT)/mpq-dmx-hw-plugin.ko \
+    #$(KERNEL_MODULES_OUT)/tspp.ko \
+    #$(KERNEL_MODULES_OUT)/wcd-core.ko \
+    #$(KERNEL_MODULES_OUT)/pinctrl-wcd.ko \
+    #$(KERNEL_MODULES_OUT)/swr-wcd-ctrl.ko \
+    #$(KERNEL_MODULES_OUT)/snd-soc-wcd9xxx.ko \
+    #$(KERNEL_MODULES_OUT)/wcd-dsp-glink.ko \
+    #$(KERNEL_MODULES_OUT)/snd-soc-wcd934x.ko \
+    #$(KERNEL_MODULES_OUT)/snd-soc-wcd-mbhc.ko \
+    #$(KERNEL_MODULES_OUT)/snd-soc-wsa881x.ko \
+    #$(KERNEL_MODULES_OUT)/snd-soc-sdm845.ko \
+    #$(KERNEL_MODULES_OUT)/snd-soc-wcd-spi.ko \
+    #$(KERNEL_MODULES_OUT)/llcc_perfmon.ko
 
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
@@ -188,7 +188,7 @@ TARGET_USES_QTI_CAMERA2CLIENT := true
 ADD_RADIO_FILES := true
 
 #Generate DTBO image
-BOARD_KERNEL_SEPARATED_DTBO := true
+#BOARD_KERNEL_SEPARATED_DTBO := true
 
 #To use libhealthd.msm instead of libhealthd.default
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
